@@ -152,10 +152,16 @@ public class LISP {
 					@SuppressWarnings("unchecked")
 					List<Object> params = (List<Object>) list.get(1);
 					return (Function<Object[], Object>)(x) -> { 
-						return eval(list.get(2), new Environment(env, params.toArray(), x)); 
+						return eval(list.get(2), new Environment(env, params.toArray(), x));
 					};
 				case "quote":
 					return list.get(1);
+				case "repeat":
+					int count = (Integer) list.get(1);
+					for (int i = 0; i < count; ++i) {
+						System.out.println(eval(list.get(2), env));
+					}
+					return null;
 				default:
 					Object proc = env.get(token);
 					Object[] args = new Object[list.size() - 1];
@@ -254,5 +260,4 @@ public class LISP {
 			}
 		}
 	}
-
 }
