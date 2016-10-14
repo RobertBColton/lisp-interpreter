@@ -1,2 +1,2 @@
 #About LISP Interpreter
-This project is an adaptation of http://norvig.com/lispy.html written in Java. It is a simple LISP interpreter with Read-eval-print-loop
+This project is an adaptation of http://norvig.com/lispy.html written in Java. It is a minimalist LISP interpreter with Read-eval-print-loop that supports simple arithmetic calculations, lambda's, loops, lexical scoping, and conditional expressions. My sole intention was to learn to write my own programming language which I already have some experience with from personal projects. The project is licensed under the GPL v3 for the educational benefit of others.
